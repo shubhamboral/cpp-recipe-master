@@ -1,0 +1,55 @@
+[  0%] Built target RecipeBook_autogen_timestamp_deps
+[ 14%] Built target RecipeBook_autogen
+[ 28%] Building CXX object CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp: In member function 'void MainWindow::on_addButton_clicked()':
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:23:77: error: no match for 'operator=' (operand types are 'std::vector<std::__cxx11::basic_string<char> >' and 'std::string' {aka 'std::__cxx11::basic_string<char>'})
+   23 |     newRecipe.ingredients = ui->ingredientsInput->toPlainText().toStdString();
+      |                                                                             ^
+In file included from C:/msys64/mingw64/include/c++/14.2.0/vector:72,
+                 from C:/msys64/mingw64/include/c++/14.2.0/functional:64,
+                 from C:/Qt/6.8.2/mingw_64/include/QtCore/qcomparehelpers.h:27,
+                 from C:/Qt/6.8.2/mingw_64/include/QtCore/qcompare.h:631,
+                 from C:/Qt/6.8.2/mingw_64/include/QtCore/qnamespace.h:13,
+                 from C:/Qt/6.8.2/mingw_64/include/QtCore/qobjectdefs.h:12,
+                 from C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h:8,
+                 from C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h:8,
+                 from C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmainwindow.h:8,
+                 from C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMainWindow:1,
+                 from C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.h:4,
+                 from C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:1:
+C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc:210:5: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >]'
+  210 |     vector<_Tp, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~
+C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc:211:42: note:   no known conversion for argument 1 from 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'const std::vector<std::__cxx11::basic_string<char> >&'
+  211 |     operator=(const vector<_Tp, _Alloc>& __x)
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from C:/msys64/mingw64/include/c++/14.2.0/vector:66:
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h:766:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >]'
+  766 |       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h:766:26: note:   no known conversion for argument 1 from 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'std::vector<std::__cxx11::basic_string<char> >&&'
+  766 |       operator=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 ~~~~~~~~~^~~
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h:788:7: note: candidate: 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >]'
+  788 |       operator=(initializer_list<value_type> __l)
+      |       ^~~~~~~~
+C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h:788:46: note:   no known conversion for argument 1 from 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'std::initializer_list<std::__cxx11::basic_string<char> >'
+  788 |       operator=(initializer_list<value_type> __l)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:24:15: error: 'struct Recipe' has no member named 'instructions'
+   24 |     newRecipe.instructions = ui->instructionsInput->toPlainText().toStdString();
+      |               ^~~~~~~~~~~~
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:24:34: error: 'class Ui::MainWindow' has no member named 'instructionsInput'
+   24 |     newRecipe.instructions = ui->instructionsInput->toPlainText().toStdString();
+      |                                  ^~~~~~~~~~~~~~~~~
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp: In member function 'void MainWindow::on_loadButton_clicked()':
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:38:16: error: 'class RecipeBook' has no member named 'loadRecipes'; did you mean 'addRecipe'?
+   38 |     recipeBook.loadRecipes();
+      |                ^~~~~~~~~~~
+      |                addRecipe
+C:\Users\Shubham\Desktop\Recipebook\src\ui\mainwindow.cpp:41:44: error: 'fromStdVector' is not a member of 'QList<Recipe>'
+   41 |     QList<Recipe> recipes = QList<Recipe>::fromStdVector(vecRecipes); // ✅ Fix: Convert std::vector to QList
+      |                                            ^~~~~~~~~~~~~
+mingw32-make[2]: *** [CMakeFiles\RecipeBook.dir\build.make:131: CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\Makefile2:89: CMakeFiles/RecipeBook.dir/all] Error 2
+mingw32-make: *** [Makefile:90: all] Error 2

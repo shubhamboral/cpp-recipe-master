@@ -5,7 +5,6 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/q23utility.h \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qarraydata.h \
@@ -47,13 +46,11 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/Qt/6.8.2/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qhashfunctions.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiodevicebase.h \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlist.h \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmap.h \
@@ -74,7 +71,6 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/Qt/6.8.2/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qrect.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qrefcount.h \
-  C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qset.h \
@@ -147,32 +143,17 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h \
-  C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMainWindow \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistview.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmainwindow.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/Shubham/Desktop/Recipebook/include/recipebook.h \
+  C:/Users/Shubham/Desktop/Recipebook/src/recipebook.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -348,6 +329,7 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
+  C:/msys64/mingw64/include/corecrt_wctype.h \
   C:/msys64/mingw64/include/corecrt_wstdlib.h \
   C:/msys64/mingw64/include/crtdefs.h \
   C:/msys64/mingw64/include/ctype.h \
@@ -359,6 +341,7 @@ C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/YPKJ5OE7LN/moc_main
   C:/msys64/mingw64/include/pthread_signal.h \
   C:/msys64/mingw64/include/pthread_time.h \
   C:/msys64/mingw64/include/pthread_unistd.h \
+  C:/msys64/mingw64/include/sched.h \
   C:/msys64/mingw64/include/sdks/_mingw_ddk.h \
   C:/msys64/mingw64/include/sec_api/stdio_s.h \
   C:/msys64/mingw64/include/sec_api/string_s.h \

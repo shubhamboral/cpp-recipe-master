@@ -4,11 +4,10 @@
 #include <vector>
 #include <string>
 
-class Recipe
+struct Recipe
 {
-public:
     std::string name;
-    std::string ingredients;
+    std::vector<std::string> ingredients;
     std::string instructions;
 };
 
@@ -16,11 +15,13 @@ class RecipeBook
 {
 private:
     std::vector<Recipe> recipes;
+    void saveRecipes() const;
 
 public:
+    RecipeBook();
     void addRecipe(const Recipe &recipe);
     std::vector<Recipe> getRecipes() const;
-    void loadRecipes(); // ✅ Fix: Added this function declaration
+    void loadRecipes();
 };
 
 #endif // RECIPEBOOK_H

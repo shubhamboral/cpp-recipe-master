@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QListWidget>
 #include "recipebook.h"
 
 QT_BEGIN_NAMESPACE

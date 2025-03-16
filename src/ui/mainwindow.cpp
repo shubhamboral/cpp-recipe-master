@@ -1,14 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QString>
-#include <QMessageBox> // ✅ Fix: Included QMessageBox
-#include <QList>
-#include <vector>
+#include "recipebook.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    recipeBook.loadRecipes(); // Load recipes when the app starts
 }
 
 MainWindow::~MainWindow()
@@ -19,18 +17,18 @@ MainWindow::~MainWindow()
 void MainWindow::on_addButton_clicked()
 {
     Recipe newRecipe;
-    newRecipe.name = ui->nameInput->text().toStdString(); // ✅ Fix: Converted QString to std::string
-    newRecipe.ingredients = ui->ingredientsInput->toPlainText().toStdString();
-    newRecipe.instructions = ui->instructionsInput->toPlainText().toStdString();
+    newRecipe.name = ui->nameInput->text().toStdString();
 
-    if (newRecipe.name.empty())
-    { // ✅ Fix: Used `.empty()` instead of `.isEmpty()`
-        QMessageBox::warning(this, "Warning", "Recipe name cannot be empty!");
-        return;
+    // Convert multi-line text into a vector of ingredients
+    QStringList ingredientList = ui->ingredientsInput->toPlainText().split("\n", Qt::SkipEmptyParts);
+    for (const QString &ingredient : ingredientList)
+    {
+        newRecipe.ingredients.push_back(ingredient.toStdString());
     }
 
+    newRecipe.instructions = ui->stepsInput->toPlainText().toStdString();
+
     recipeBook.addRecipe(newRecipe);
-    ui->recipeListWidget->addItem(QString::fromStdString(newRecipe.name)); // ✅ Fix: Converted std::string to QString
 }
 
 void MainWindow::on_loadButton_clicked()
@@ -38,11 +36,10 @@ void MainWindow::on_loadButton_clicked()
     recipeBook.loadRecipes();
 
     std::vector<Recipe> vecRecipes = recipeBook.getRecipes();
-    QList<Recipe> recipes = QList<Recipe>::fromStdVector(vecRecipes); // ✅ Fix: Convert std::vector to QList
 
     ui->recipeListWidget->clear();
-    for (const Recipe &recipe : recipes)
+    for (const Recipe &recipe : vecRecipes)
     {
-        ui->recipeListWidget->addItem(QString::fromStdString(recipe.name)); // ✅ Fix: Convert std::string to QString
+        ui->recipeListWidget->addItem(QString::fromStdString(recipe.name));
     }
 }

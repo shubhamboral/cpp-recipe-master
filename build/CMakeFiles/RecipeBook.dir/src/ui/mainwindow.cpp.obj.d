@@ -194,6 +194,7 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/cwchar \
  C:/msys64/mingw64/include/wchar.h \
  C:/msys64/mingw64/include/corecrt_stdio_config.h \
+ C:/msys64/mingw64/include/corecrt_wctype.h \
  C:/msys64/mingw64/include/_mingw_off_t.h \
  C:/msys64/mingw64/include/_mingw_stat64.h \
  C:/msys64/mingw64/include/swprintf.inl \
@@ -214,6 +215,7 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/msys64/mingw64/include/_timeval.h \
  C:/msys64/mingw64/include/pthread_time.h \
  C:/msys64/mingw64/include/pthread_compat.h \
+ C:/msys64/mingw64/include/sched.h \
  C:/msys64/mingw64/include/pthread_unistd.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
  C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h \
@@ -369,26 +371,7 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistwidget.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qitemselectionmodel.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
- C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Users/Shubham/Desktop/Recipebook/include/recipebook.h \
+ C:/Users/Shubham/Desktop/Recipebook/src/recipebook.h \
  C:/Users/Shubham/Desktop/Recipebook/build/RecipeBook_autogen/include/ui_mainwindow.h \
  C:/Qt/6.8.2/mingw_64/include/QtCore/QVariant \
  C:/Qt/6.8.2/mingw_64/include/QtCore/qvariant.h \
@@ -403,9 +386,11 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qguiapplication.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qinputmethod.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qlocale.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qguiapplication_platform.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLineEdit \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h \
  C:/Qt/6.8.2/mingw_64/include/QtCore/qurl.h \
@@ -413,10 +398,23 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.8.2/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMainWindow \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMenuBar \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmenubar.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmenu.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -431,12 +429,4 @@ CMakeFiles/RecipeBook.dir/src/ui/mainwindow.cpp.obj: \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/QString \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
- C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
- C:/Qt/6.8.2/mingw_64/include/QtCore/QList \
- C:/Qt/6.8.2/mingw_64/include/QtCore/qlist.h
+ C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h

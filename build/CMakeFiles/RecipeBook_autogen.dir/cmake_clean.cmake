@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RecipeBook_autogen"
-  "RecipeBook_autogen/include/src/ui/ui_mainwindow.h"
   "RecipeBook_autogen/mocs_compilation.cpp"
   "RecipeBook_autogen/timestamp"
 )
